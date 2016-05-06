@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :profiles
   resources :subjects
   devise_for :users
-  root "home#index"
+  root "klasses#index"
 end
