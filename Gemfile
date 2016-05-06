@@ -27,6 +27,7 @@ gem 'devise'
 gem 'rack-cors'
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'react_on_rails'
 
 
 # Use ActiveModel has_secure_password
