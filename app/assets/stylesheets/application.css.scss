@@ -1,3 +1,6 @@
+@import "fonts";
+$brandon: 'BrandonGrotesque-Regular';
+
 header {
    height: 135px;
    background: #e63d02;
@@ -11,7 +14,7 @@ header {
 .textheader {
    display: inline-block;
    font-size:40px;
-   font-family: "Brandon Grotesque", sans-serif;
+   font-family: $brandon, sans-serif;
    flex: 1;
    text-align: center;
    margin-right:90px;
@@ -20,7 +23,7 @@ header {
   a:link, a:hover, a:visited {
     color: #fff;
     text-decoration: none;
-    font-family: "Brandon Grotesque", sans-serif;
+    font-family: $brandon, sans-serif;
   }
 
 }
@@ -29,7 +32,7 @@ header {
   display: inline-block;;
   font-size: 25px;
   color: #FFFFFF;
-  font-family: "Brandon Grotesque", sans-serif;
+  font-family: $brandon, sans-serif;
   flex: 1;
   text-align: right;
   right:inherit;
@@ -42,7 +45,7 @@ header {
  display: inline-block;;
  font-size:20px;
  color: #FFFFFF;
- font-family: "Brandon Grotesque", sans-serif;
+ font-family: $brandon, sans-serif;
  flex: 1;
  text-align:right;
  margin-right:50px;
@@ -50,7 +53,7 @@ header {
  a:link, a:hover, a:visited {
    color: #fff;
    text-decoration: none;
-   font-family: "Brandon Grotesque", sans-serif;
+   font-family: $brandon, sans-serif;
  }
 }
 
@@ -58,7 +61,7 @@ footer {
   height: 110px;
   background: #1C5D6F;
   display:flex;
-  font-family: "Brandon Grotesque", sans-serif;
+  font-family: $brandon, sans-serif;
   color:white;
   width: 100%;
   position:fixed;
@@ -79,7 +82,7 @@ footer {
 
 body {
   margin: 0;
-  font-family: "Brandon Grotesque", sans-serif;
+  font-family: $brandon, sans-serif;
 }
 
 .flex-container {
@@ -90,7 +93,7 @@ body {
 
 section.content {
   flex: 1;
-  font-family: "Brandon Grotesque", sans-serif;
+  font-family: $brandon, sans-serif;
   text-align: center;
 }
 
@@ -98,8 +101,8 @@ section.content {
   left:30%auto;
 
 }
-element {
+.element {
     color: white;
     text-decoration: none;
-    font-family: "Brandon Grotesque", sans-serif;
+    font-family: $brandon, sans-serif;
 }
