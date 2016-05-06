@@ -5,8 +5,15 @@ Rails.application.routes.draw do
   resources :topics
   resources :profiles
   resources :subjects
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
-  }
+  devise_for :users
   root "home#index"
+
+  resources :subjects do
+  resources :topics
+end
+
+  resources :topics do
+  resources :klasses
+end
+
 end
