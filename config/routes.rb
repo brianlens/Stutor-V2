@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :topics
   resources :profiles
   resources :subjects
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
   root "home#index"
 end
