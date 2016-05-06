@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @klass.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @klass.description %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @klass.appointment %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @klass.duration %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @klass.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_klass_path(@klass) %> |
+<%= link_to 'Back', klasses_path %>
