@@ -5,6 +5,13 @@ class TopicsController < ApplicationController
   # GET /topics.json
   def index
     @topics = Topic.all
+
+    if params[:search]
+      @topics = Topic.search(params[:search])
+      render :search
+    else
+      @topic = Topic.all.order('created_at DESC')
+    end
   end
 
   # GET /topics/1
