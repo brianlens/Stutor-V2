@@ -1,8 +1,13 @@
+
+<% if @home_banner %>
+<% else %>
+
   <br>
-<footer>
-    <div class="textfooter">
-      <%= link_to "Home", root_path %>
-      / <%= link_to "Subjects", subjects_path %> /
-      <%= link_to "Contact", contact_path %>
-  </div>
-</footer>
+  <footer>
+      <div class="textfooter">
+        <%= link_to "Home", root_path %>
+        / <%= link_to "Subjects", subjects_path %> /
+        <%= link_to "Contact", contact_path %>
+    </div>
+  </footer>
+<% end %>
