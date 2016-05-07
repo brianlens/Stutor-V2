@@ -1,6 +1,3 @@
-
-
-
 Subject.create({ name:"Mathematics" })
 Subject.create({ name:"Science" })
 Subject.create({ name:"Economics" })
@@ -17,11 +14,11 @@ Topic.create({ title: "Shakespeare", description:"", subject_id:4, user_id:4 })
 Topic.create({ title: "React on Rails", description:"", subject_id:5, user_id:3 })
 Topic.create({ title: "JavaScript", description:"", subject_id:5, user_id:1 })
 
-Klass.create( { name:"JavaScript", description:"...", appointment:DateTime.strptime("05/22/2016 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:1, topic_id:8})
-Klass.create( { name:"React on Rails", description:"...", appointment:DateTime.strptime("05/28/2016 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:1, topic_id:7 })
-Klass.create( { name:"Temperature and volatility", description:"...", appointment:DateTime.strptime("05/26/2016 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:2, topic_id:3  })
-Klass.create( { name:"Keynes and the Future", description:"...", appointment:DateTime.strptime("05/27/2009 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:3, topic_id:5  })
-Klass.create( { name:"Shakespeare in 2016", description:"...", appointment:DateTime.strptime("05/29/2009 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:4, topic_id:6  })
+Klass.create( { name:"JavaScript", description:"We will touch the first basic of JavaScript", appointment:DateTime.strptime("05/22/2016 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:1, topic_id: 8 })
+Klass.create( { name:"React on Rails", description:"Master everything on React on Rails, this is easy!", appointment:DateTime.strptime("05/28/2016 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:1, topic_id: 7 })
+Klass.create( { name:"Temperature and volatility", description:"Learning how molecules behave in different temperatures of the surroundgingszZ0rz", appointment:DateTime.strptime("05/26/2016 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:2, topic_id: 3 })
+Klass.create( { name:"Keynes and the Future", description:"Keynes, the cornerstone of the current economy. But how relevant is this theory still?", appointment:DateTime.strptime("05/27/2009 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:3, topic_id: 5  })
+Klass.create( { name:"Shakespeare in 2016", description:"To beer or not to beer", appointment:DateTime.strptime("05/29/2009 8:00", "%m/%d/%Y %H:%M") , duration:10, user_id:4, topic_id: 6  })
 
 User.create({ name:"Michaelus", last_name:"Farr", city:"Amsterdam", postalcode:"1092VC", email:"michfarr@gmail.com", password:"michfarr", password_confirmation:"michfarr"})
 User.create({ name:"Laurentius", last_name:"Weening", city:"Amstelveen", postalcode:"1121AB", email:"laurentius@gmail.com", password:"laurenceweening", password_confirmation:"laurenceweening"})
