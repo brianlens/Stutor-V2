@@ -1,7 +1,25 @@
 <p id="notice"><%= notice %></p>
+<style>
+
+.tablecontainer {
+  background-color: #4D4D4D;
+  padding: 25px;
+  width:825px;
+  border-radius: 25px;
+  color:white;
+  text-align: justify;
+
+}
+</style>
+
+
+
+<center>
+<div class = 'tablecontainer'>
+
 
 <p>
-  <strong>Name:</strong>
+  <strong>Sensei:</strong>
   <%= @klass.name %>
 </p>
 
@@ -20,11 +38,8 @@
   <%= @klass.duration %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @klass.user_id %>
-</p>
-
-
+</div>
+<%= link_to 'Join this class'%> |
 <%= link_to 'Edit', edit_klass_path(@klass) %> |
 <%= link_to 'Back', klasses_path %>
+</center>
