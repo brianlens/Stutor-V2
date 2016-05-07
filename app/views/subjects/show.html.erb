@@ -4,7 +4,9 @@
   <strong>Name:</strong>
   <%= @subject.name %>
 </p>
-  <%= @subject.klasses.title%>
+
+  <% topics = @subject.topics.sort_by { |topic| topic.title } %>
+  <%= render topics  %>
 <p>
 
 
