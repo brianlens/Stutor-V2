@@ -3,6 +3,8 @@
 $brandon: 'BrandonGrotesque-Regular';
 
 @import "search";
+@import "loginregister";
+@import "messages";
 
 header {
    height: 135px;
@@ -47,7 +49,7 @@ header {
 }
 
 .textfooter {
- display: inline-block;;
+ display: inline-block;
  font-size:20px;
  color: #FFFFFF;
  font-family: $brandon, sans-serif;
@@ -69,9 +71,10 @@ footer {
   font-family: $brandon, sans-serif;
   color:white;
   width: 100%;
-  position:sticky;
-     left:0px;
-     bottom:0px;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
 }
 
 .logo {

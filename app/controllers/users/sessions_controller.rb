@@ -30,7 +30,7 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  # protected
+   protected
 
     def invalid_login_attempt
       message = "Invalid email/password combination"
