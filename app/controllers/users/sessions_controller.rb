@@ -7,9 +7,23 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    resource = User.find_for_database_authentication(
+               email: params[:user][:email])
+    return invalid_login_attempt unless resource
+
+    if resource.valid_password?(params[:user][:password])
+      sign_in :user, resource
+      message = "Welcome #{resource.email}, Nice of you to join us today"
+      flash[:notice] = message
+      redirect_to root_path
+
+    else
+        invalid_login_attempt
+    end
+
+
+  end
 
   # DELETE /resource/sign_out
   # def destroy
@@ -18,8 +32,9 @@ class Users::SessionsController < Devise::SessionsController
 
   # protected
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_in_params
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-  # end
+    def invalid_login_attempt
+      message = "Invalid email/password combination"
+      flash[:alert] = message
+      redirect_to root_path
+    end
 end
