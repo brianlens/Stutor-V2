@@ -2,7 +2,7 @@
   <div class="logo"><%= link_to image_tag("logo1.png"), root_path %></div>
   <div class="textheader">
     <%= link_to "Home", root_path %>
-    <a href="/users">/ All Stutors /</a>
+    <%= link_to "Subjects", subjects_path %>
     <%= link_to "Contact", contact_path %>
     <div class="Singupheader">
     <% if !user_signed_in? %>
