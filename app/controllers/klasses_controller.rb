@@ -5,7 +5,9 @@ class KlassesController < ApplicationController
   # GET /klasses
   # GET /klasses.json
   def index
-    @klasses = Klass.all
+    @topic = Topic.find(params[:topic_id])
+    @klasses = @topic.klasses
+
   end
 
   # GET /klasses/1
