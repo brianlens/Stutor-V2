@@ -1,11 +1,11 @@
 <br>
 <footer>
-    <a class="logofooter" href="/welcome/index"><%=image_tag("logo1.png")%></a>
+    <%= link_to image_tag("logo1.png"), root_path, class: "logofooter"%></a>
 
     <div class="textfooter">
-      <a href="/welcome/index"> Home /</a>
+      <%= link_to "Home", root_path %>
       <a href="/users"> All Stutors /</a>
-      <a href="/contact"> Contact </a>
+      <%= link_to "Contact", contact_path %>
   </div>
 
 </footer>
