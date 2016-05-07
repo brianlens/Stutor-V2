@@ -9,16 +9,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+
+
     build_resource(sign_up_params)
 
     resource.save
+    @profile = Profile.new(name: resource_name, user_id: resource.id)
+    @profile.save
+
     yield resource if block_given?
     if resource.persisted?
       if resource.active_for_authentication?
+
         message = "You successfully registered! Welcome #{resource.email}"
         flash[:notice] = message
         sign_up(resource_name, resource)
-        respond_with resource, location: root_path
+        respond_with resource, location: @profile
       else
         message = "signed_up_but_#{resource.inactive_message}"
         flash[:notice] =  message
@@ -32,7 +38,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash[:alert] = message
       redirect_to root_path
     end
-  end
+end
 
   # GET /resource/edit
   # def edit
@@ -64,4 +70,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash[:alert] = message
       redirect_to root_path
     end
+
+    def set_profile
+      @profile = Profile.find(params[:id])
+    end
+
+    # def profile_params
+    #   params.require(:profile).permit(:name, :user_id)
+    # end
 end
