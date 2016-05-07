@@ -6,7 +6,8 @@
     <a href="/contacts"> Contact </a>
     <div class="Singupheader">
     <% if !user_signed_in? %>
-    <%= link_to "(Log In)", new_user_session_path %>
+      Log-in
+    <!-- <%= link_to "(Log In)", new_user_session_path %> -->
     <% else %>
     <%= current_user.email %>
     <%= link_to "(Log Out)", destroy_user_session_path, :method => :delete %>
@@ -14,3 +15,11 @@
   </div>
  </div>
 </header>
+
+<div class="login" style="display: none">
+  <%= render 'devise/sessions/form' %>
+</div>
+
+<div class="register" style="display:none">
+  <%= render 'devise/registrations/regform' %>
+</div>
