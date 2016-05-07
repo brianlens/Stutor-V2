@@ -1,14 +1,29 @@
 <p id="notice"><%= notice %></p>
+<style>
+.results {
+  background-color: black;
+  opacity: 0.7;
+  width: 500px;
+  color: white;
+  padding:25px;
+  border-radius: 25px;
+  text-align: justify;
+}
 
+</style>
+
+<center>
+<div class='results'>
 <p>
-  <strong>Name:</strong>
+  <strong>SUBJECT:</strong>
   <%= @subject.name %>
 </p>
 
   <% topics = @subject.topics.sort_by { |topic| topic.title } %>
   <%= render topics  %>
 <p>
-
+</div>
+</center>
 
 
 

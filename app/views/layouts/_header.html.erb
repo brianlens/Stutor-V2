@@ -23,6 +23,9 @@
   <%= render 'devise/registrations/regform' %>
 </div>
 
+<% if @home_banner %>
+
+    <% else %>
     <div class = "search-subject" style="display:initial">
        <%= form_tag(subjects_path, :method => "get", id: "search-form") do %>
         <%= search_field_tag :search, params[:search], placeholder: "Search" %>
@@ -60,3 +63,4 @@
         </label> -->
 
       </div>
+      <% end %>
