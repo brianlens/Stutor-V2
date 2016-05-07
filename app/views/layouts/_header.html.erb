@@ -15,6 +15,14 @@
  </div>
 </header>
 
+<div class="login" style="display: none">
+  <%= render 'devise/sessions/form' %>
+</div>
+
+<div class="register" style="display:none">
+  <%= render 'devise/registrations/regform' %>
+</div>
+
     <div class = "search-subject" style="display:initial">
        <%= form_tag(subjects_path, :method => "get", id: "search-form") do %>
         <%= search_field_tag :search, params[:search], placeholder: "Search" %>
@@ -52,13 +60,3 @@
         </label> -->
 
       </div>
-
-
-
-<div class="login" style="display: none">
-  <%= render 'devise/sessions/form' %>
-</div>
-
-<div class="register" style="display:none">
-  <%= render 'devise/registrations/regform' %>
-</div>
