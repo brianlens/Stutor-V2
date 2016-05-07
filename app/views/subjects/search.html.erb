@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Search Results</h1>
+
+  <p>all of your results </p>
+
+
+  <% if @subjects.count > 0 %>
+    <ul class="bxslider">
+      <%= render @subjects %>
+    </ul>
+  <% else %>
+    <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+</div>
