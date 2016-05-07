@@ -1,13 +1,12 @@
 <header>
-  <div class="logo"><a href="/welcome/index"><%=image_tag("logo1.png")%></a></div>
+  <div class="logo"><%= link_to image_tag("logo1.png"), root_path %></div>
   <div class="textheader">
-    <a href="/welcome/index"> Home /</a>
+    <%= link_to "Home", root_path %>
     <a href="/users"> All Stutors /</a>
-    <a href="/contacts"> Contact </a>
+    <%= link_to "Contact", contact_path %>
     <div class="Singupheader">
     <% if !user_signed_in? %>
-      Log-in
-    <!-- <%= link_to "(Log In)", new_user_session_path %> -->
+    	Log-in
     <% else %>
     <%= current_user.email %>
     <%= link_to "(Log Out)", destroy_user_session_path, :method => :delete %>
