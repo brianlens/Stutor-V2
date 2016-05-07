@@ -1,35 +1,53 @@
+<style>
+
+.tablecontainer {
+  background-color: #4D4D4D;
+  padding: 25px;
+  width:825px;
+  border-radius: 25px;
+
+}
+
+.tablebody {
+  width: 750px;
+}
+
+.tabletitle {
+  font-family: 'Brandon Grotesque';
+  position: relative;
+  color: white;
+
+}
+
+.searchres {
+  font-size: 25px;
+}
+
+
+</style>
+<html>
+
 <p id="notice"><%= notice %></p>
+<center>
+<div class= "tablecontainer">
 
-<h1>Listing Klasses</h1>
+<h2 class = "tabletitle">Classes for your topic</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Appointment</th>
-      <th>Duration</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @klasses.each do |klass| %>
-      <tr>
-        <td><%= klass.name %></td>
-        <td><%= klass.description %></td>
-        <td><%= klass.appointment %></td>
-        <td><%= klass.duration %></td>
-        <td><%= klass.user_id %></td>
-        <td><%= link_to 'Show', klass %></td>
-        <td><%= link_to 'Edit', edit_klass_path(klass) %></td>
-        <td><%= link_to 'Destroy', klass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+        <%= klass.name %></td>
+        <%= klass.description %></td>
+        <%= klass.appointment %></td>
+        <%= klass.duration %></td>
+        <%= klass.user_id %></td>
+        <%= link_to 'Show', klass %></td>
+        <%= link_to 'Edit', edit_klass_path(klass) %></td>
+        <%= link_to 'Destroy', klass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Klass', new_klass_path %>
+<%= link_to 'Add new class', new_klass_path %>
