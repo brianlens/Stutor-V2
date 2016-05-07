@@ -1,14 +1,27 @@
-<div class="container">
-  <h1>Search Results</h1>
+<style>
 
-  <p>all of your results </p>
+.tablecontainer {
+  background-color: #4D4D4D;
+  padding: 25px;
+  width:825px;
+  border-radius: 25px;
+  font-family: 'Brandon Grotesque';
+  color:white;
+  text-align: justify;
 
+}
+
+</style>
+
+<center>
+<div class= "tablecontainer">
+  <h3>SUBJECTS FOUND FOR YOU:</h3><br>
 
   <% if @subjects.count > 0 %>
-    <ul class="bxslider">
       <%= render @subjects %>
-    </ul>
-  <% else %>
+  <% else %><br>
     <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
   <% end %>
+</div>
+</center>
 </div>

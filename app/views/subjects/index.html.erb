@@ -1,26 +1,58 @@
+<style>
+
+.tablecontainer {
+  background-color: #4D4D4D;
+  padding: 25px;
+  width:825px;
+  border-radius: 25px;
+
+}
+
+.tablebody {
+  width: 750px;
+}
+
+.tabletitle {
+  font-family: 'Brandon Grotesque';
+  position: relative;
+  color: white;
+
+}
+
+.searchres {
+  font-size: 25px;
+}
+
+
+</style>
+<html>
+
 <p id="notice"><%= notice %></p>
+<center>
+<div class= "tablecontainer">
 
-<h1>Listing Subjects</h1>
+<h2 class = "tabletitle">SUBJECTS FOUND FOR YOU</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
     <% @subjects.each do |subject| %>
       <tr>
-        <td><%= link_to subject.name, subject %></td>
-        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
+        <p class = 'searchres'>
+        <td><%= link_to subject.name, subject %></td><br>
+      </p>
+
+    <% end %>
+</p>
+</div>
+</center>
 <br>
 
-<%= link_to 'New Subject', new_subject_path %>
+<center>
+<% if !user_signed_in? %>
+ <p class ='add-subject'>
+ <%= link_to ' Create a new subject', new_subject_path %>
+ </p>
+ <% else %>
+ <% end %>
+</center>
