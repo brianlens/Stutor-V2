@@ -1,3 +1,3 @@
 == README
 
-second prototype version of Stutor, the online tutoring platform in Amsterdam.
+second prototype version of Stutor, the online tutoring platform in Amsterdam. made at the last Codaisseur two-day hackathon.
